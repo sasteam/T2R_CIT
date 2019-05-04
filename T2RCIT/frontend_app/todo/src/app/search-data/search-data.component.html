@@ -1,0 +1,89 @@
+<div class="navibar">
+  <nav>
+        <ul>
+            <li>
+                <a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/home">HOME</a>
+                <a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/about">ABOUT</a>
+                <a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/contact">CONTACT</a>                    
+                <a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/logout">LOG OUT</a>
+     
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="showcase">
+  <h1>Search Data</h1>
+  <form action="">
+      <fieldset>
+          <legend>Choose the Data</legend>
+          <div>
+              LINE OF BUSINESS
+              <input type="radio" name="radio" value="retail" checked>Retail
+              <input type="radio" name="radio" value="gs">Global Services
+              <input type="radio" name="radio" value="ws">Wholesale
+          </div>
+          <div>
+              MODEL ENVIRONMENT
+              <input type="radio" name="radiobutton" value="ModelA">Model A
+              <input type="radio" name="radiobutton" value="ModelB">Model B
+              <input type="radio" name="radiobutton" value="ModelC">Model C
+          </div>
+          <div>
+              PRODUCT
+
+              <select name="products" id="products">
+                  <option value="#" selected>SELECT PRODUCT</option>
+                  <option value="pstn">PSTN</option>
+                  <option value="isdn">ISDN</option>
+                  <option value="broadband">BROADBAND</option>
+                  <option value="cloudvoice">CLOUD VOICE</option>
+                  <option value="mobile">MOBILE</option>
+                  <option value="btsports">BT SPORTS</option>
+              </select>
+          </div>
+          <div>
+              PRODUCT SUB CATEGORY
+              <select name="productscategory" id="productscategory">
+                  <option value="#" selected>SELECT PRODUCT FLAVOUR</option>
+                  <option value="pstn">SINGLE LINE</option>
+                  <option value="pstn">FEATURED LINE</option>
+                  <option value="pstn">ML 2 LINES</option>
+                  <option value="pstn">ML 3 LINES</option>
+                  <option value="pstn">PSTN FRESH</option>
+                  <option value="isdn">ISDN2e</option>
+                  <option value="isdn">ISDN30</option>
+                  <option value="isdn">ISDN30e</option>
+                  <option value="broadband">WBC</option>
+                  <option value="broadband">FTTC</option>
+                  <option value="broadband">FTTP</option>
+                  <option value="broadband">SOGEA</option>
+                  <option value="broadband">SOGFAST</option>
+                  <option value="broadband">20C</option>
+                  <option value="cloudvoice">CV SIMPLE_EXPRESS</option>
+                  <option value="cloudvoice">CV COMPLEX</option>
+                  <option value="cloudvoice">CV SIPT</option>
+                  <option value="mobile">SIM ONLY 1 GB</option>
+                  <option value="mobile">SIM ONLY 2 GB</option>
+                  <option value="mobile">SIM ONLY 5 GB</option>
+                  <option value="mobile">SIM ONLY 10 GB</option>
+                  <option value="mobile">SOLO</option>
+                  <option value="mobile">MOBILE BROADBAND</option>
+              </select>
+          </div>
+          <div>
+              PRODUCT TYPE
+              <select name="productstype">
+                  <option value="#" selected>SELECT PRODUCT TYPE</option>
+                  <option value="strategic">STRATEGIC</option>
+                  <option value="migrated">MIGRATED</option>
+                  <option value="legacy">LEGACY</option>
+
+              </select>
+          </div>
+      </fieldset>
+
+      <button type="submit" class="submit"><a href="../html/data.html">GET DATA</a></button>
+  </form>
+
+</div>

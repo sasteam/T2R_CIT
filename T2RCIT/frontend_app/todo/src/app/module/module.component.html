@@ -1,0 +1,25 @@
+<div class="navibar">
+      <nav>
+            <ul>
+                <li>
+                    <a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/home">HOME</a>
+                    <a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/about">ABOUT</a>
+                    <a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/contact">CONTACT</a>                    
+                    <a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/logout">LOG OUT</a>
+         
+                </li>
+            </ul>
+        </nav>
+</div>
+
+<div>   
+        {{messageFromServiceInModule}}
+    
+</div>
+<div class="showcase">
+  
+      <button *ngIf="authenticationService.isUserLoggedIn()" (click)=searchData()>SEARCH DATA</button><br>
+      <button *ngIf="authenticationService.isUserLoggedIn()" routerLink="/addData">ADD DATA</button><br>
+      <button *ngIf="authenticationService.isUserLoggedIn()" routerLink="/removeData">MODIFY DATA</button>
+  
+</div>

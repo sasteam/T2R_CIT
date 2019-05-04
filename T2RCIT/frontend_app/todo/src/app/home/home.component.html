@@ -1,0 +1,20 @@
+<div>
+  <div class="showcase">
+      <h1>Welcome to CIT Test Data Management System</h1>
+      <p>Get Your Test Data in few clicks</p>
+      <br>
+      <button (click)=login()>Click Me to Login</button>
+  </div>
+  <div>
+    <button (click)=getAppName()>GetAppName</button>
+
+  </div>
+  <div *ngIf="messageFromService" class="temp">
+    {{messageFromService}}
+  </div>
+  <div *ngIf="errorMessage" class="temp">
+    {{errorMessage}}
+  </div>
+
+
+</div>

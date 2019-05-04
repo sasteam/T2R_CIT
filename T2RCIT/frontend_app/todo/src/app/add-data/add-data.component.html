@@ -1,0 +1,13 @@
+<div class="navibar">
+  <nav>
+        <ul>
+            <li>
+                <a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/home">HOME</a>
+                <a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/about">ABOUT</a>
+                <a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/contact">CONTACT</a>                    
+                <a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/logout">LOG OUT</a>
+     
+            </li>
+        </ul>
+    </nav>
+</div>

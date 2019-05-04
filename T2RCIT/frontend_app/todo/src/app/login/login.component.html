@@ -1,0 +1,38 @@
+<div class="navibar">
+    <nav>
+        <ul>
+            <li>
+                <a routerLink="/home">HOME</a>
+                <a routerLink="/about">ABOUT</a>
+                <a routerLink="/contact">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<small *ngIf='invalidLogin'>{{errorMessage}}</small>
+<div class="showcase">
+    <h1>Authorize Yourself</h1>
+
+    <div>
+        <form action="submitlogin">
+            <fieldset>
+                <legend>Login</legend>
+                <label for="Username">Username</label>
+                <br>
+                <input type="text" id="username" placeholder="Enter Username" name="username" [(ngModel)]="username"
+                    required>
+                <br>
+                <label for="Password">Password</label>
+                <br>
+                <input type="password" id="password" placeholder="Enter Password" name="password" [(ngModel)]="password"
+                    required>
+
+            </fieldset>
+            <button (click)=handleLogin()>Login</button>
+        </form>
+
+      
+    </div>
+  
+</div>
