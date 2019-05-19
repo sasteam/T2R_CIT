@@ -18,4 +18,12 @@ export class ApplicationDataService {
   loginService(name){
     return this.http.get(`http://localhost:8080/login/${name}`,{responseType: 'text'});
   }
+  // basicAuthService(){
+  //   return this.http.get('http://localhost:8080/basicauth',{responseType: 'text'});
+  // }
+ 
+
+}
+export class AuthenticationBean{
+   
 }

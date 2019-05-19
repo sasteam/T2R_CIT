@@ -15,7 +15,8 @@ import { ContactComponent } from './contact/contact.component';
 import { SearchDataComponent } from './search-data/search-data.component';
 import { AddDataComponent } from './add-data/add-data.component';
 import { ModifyDataComponent } from './modify-data/modify-data.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpIntercepterBasicAuthService } from './service/http/http-intercepter-basic-auth.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,9 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:HttpIntercepterBasicAuthService,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

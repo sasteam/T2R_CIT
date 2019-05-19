@@ -21,6 +21,15 @@ export class AuthenticationService{
     return !(user===null)
   }
   logout(){
-    sessionStorage.removeItem('authenticatedUser')
+    sessionStorage.removeItem('authenticatedUser');
+    sessionStorage.removeItem('token');
+  }
+
+  getAuthenticatedUser(){
+    return sessionStorage.getItem('authenticatedUser');
+  }
+  getAuthenticatedToken(){
+    if(this.getAuthenticatedUser())
+      return sessionStorage.getItem('token');
   }
 }
